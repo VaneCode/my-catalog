@@ -24,4 +24,11 @@ class Item
   def add_label(label)
     @label = label
   end
+
+  def move_to_archive
+  end
+
+  private
+  def can_be_archieved?
+  end
 end
