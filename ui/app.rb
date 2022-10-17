@@ -19,9 +19,9 @@ class App
     when 1 then Book.list_books(@books)
     when 2 then Music_Album.list_albums(@music_albmus)
     when 3 then Movie.list_movies(@movies)
-    when 4 then puts "list all genres"
-    when 5 then puts "list all labels"
-    when 6 then puts "list all authors"
+    when 4 then puts 'list all genres'
+    when 5 then puts 'list all labels'
+    when 6 then puts 'list all authors'
     when 7 then Book.add_book(@books)
     when 8 then Music_Album.add_book(@music_albmus)
     when 9 then Movie.add_movie(@movies)

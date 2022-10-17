@@ -3,7 +3,7 @@ require_relative '../app/item'
 
 describe Label do
   before :each do
-    @label = Label.new(id: nil, name: "Cookie")
+    @label = Label.new(id: nil, name: 'Cookie')
   end
   it 'Should be an object instance of label' do
     expect(@label).to be_an_instance_of Label
