@@ -1,4 +1,5 @@
 require 'securerandom'
+require 'time'
 class Item
   attr_reader :id, :genre, :author, :source, :label, :archived
   attr_accessor :publish_date
@@ -26,17 +27,16 @@ class Item
   end
 
   def move_to_archive
+    @archived = true if can_be_archieved?
   end
 
   private
 
   def can_be_archieved?
-    temp_date = @publish_date.to_time
-    puts temp_date
-    dif = Today.new.year - temp_date.year
-    dif  > 10 ? true : false
+    temp_date = Time.parse(@publish_date)
+    Time.new.year - temp_date.year  > 10 ? true : false
   end
 end
 
 item = Item.new(publish_date: '1990-01-20', archived: false)
-item.
+item.move_to_archive
