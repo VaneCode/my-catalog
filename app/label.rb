@@ -1,4 +1,5 @@
 require 'securerandom'
+require_relative 'item'
 
 class Label
 
@@ -9,5 +10,14 @@ class Label
         @id = id || SecureRandom.random_number(1000)
         @name = name
         @items = []
+    end
+
+    def add_item(item)
+        @items << item
+        item.add_label(self)
+    end
+
+    def list_labels(books)
+       
     end
 end
