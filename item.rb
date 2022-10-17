@@ -3,7 +3,7 @@ class Item
   attr_reader :id, :genre, :author, :source, :label, :archived
   attr_accessor :publish_date
 
-  def initialize(id:, publish_date:, archived:)
+  def initialize(publish_date:, archived:)
     @id = SecureRandom.random_number(1000)
     @publish_date = publish_date
     @archived = archived
@@ -29,6 +29,7 @@ class Item
   end
 
   private
+
   def can_be_archieved?
   end
 end
