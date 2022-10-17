@@ -31,5 +31,12 @@ class Item
   private
 
   def can_be_archieved?
+    temp_date = @publish_date.to_time
+    puts temp_date
+    dif = Today.new.year - temp_date.year
+    dif  > 10 ? true : false
   end
 end
+
+item = Item.new(publish_date: '1990-01-20', archived: false)
+item.
