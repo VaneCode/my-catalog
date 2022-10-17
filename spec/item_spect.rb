@@ -1,4 +1,4 @@
-require_relative '../item'
+require_relative '../app/item'
 
 describe Item do
   before :each do

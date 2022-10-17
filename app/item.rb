@@ -34,7 +34,7 @@ class Item
 
   def can_be_archieved?
     temp_date = Time.parse(@publish_date)
-    Time.new.year - temp_date.year  > 10 ? true : false
+    Time.new.year - temp_date.year > 10 ? true : false
   end
 end
 
